@@ -27,7 +27,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Checkout Table Headings */
+
 .checkout-headings {
     display: flex;
     justify-content: space-between;
@@ -128,5 +128,5 @@ body {
 }
 
 .checkout-button:hover {
-    background-color: #bf1a1e; /* Darker shade of AirAsia red */
+    background-color: #bf1a1e; 
 }
