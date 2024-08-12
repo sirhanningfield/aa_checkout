@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.checkout-container {
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.checkout-title {
+    color: #ED1B24; 
+    margin-bottom: 40px;
+}
+
+/* Checkout Table Headings */
+.checkout-headings {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ED1B24; 
+}
+
+.heading-item, .heading-price {
+    color: #333;
+    flex: 1;
+    text-align: left;
+}
+
+.heading-total, .heading-quantity {
+    color: #333;
+    flex: 1;
+    text-align: center;
+}
+
+.heading-total {
+    color: #333;
+    flex: 1;
+    text-align: right;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-name, .item-price {
+    color: #333;
+    flex: 1;
+    text-align: left;
+}
+
+.item-total {
+    color: #333;
+    flex: 1;
+    text-align: right;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.item-quantity button {
+    background-color: transparent;
+    color: #ED1B24; 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.item-quantity span {
+    margin: 0 10px;
+}
+
+.item-quantity button.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.subtotal, .grand-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #525252;
+    font-weight: 600;
+}
+
+.grand-total {
+    font-weight: bold;
+    color: #ED1B24; 
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ED1B24; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #bf1a1e; /* Darker shade of AirAsia red */
+}

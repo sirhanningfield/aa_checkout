@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirAsia Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="app" class="checkout-container">
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+        </div>
+
+        <h1 class="checkout-title">Checkout</h1>
+        
+        
+        <div class="checkout-headings">
+            <span class="heading-item">Item</span>
+            <span class="heading-price">Price (MYR)</span>
+            <span class="heading-quantity">Quantity</span>
+            <span class="heading-total">Total (MYR)</span>
+        </div>
+
+        <div v-for="(item, index) in cartItems" :key="index" class="cart-item">
+            <span class="item-name">{{ item.name }}</span>
+            <span class="item-price">MYR {{ item.price.toFixed(2) }}</span>
+            <div class="item-quantity">
+                <button 
+                    @click="updateQuantity(index, -1)" 
+                    :disabled="item.quantity === 0" 
+                    :class="{'disabled': item.quantity === 0}"
+                >-</button>
+                <span>{{ item.quantity }}</span>
+                <button @click="updateQuantity(index, 1)">+</button>
+            </div>
+            <span class="item-total">MYR {{ (item.price * item.quantity).toFixed(2) }}</span>
+        </div>
+        
+        <div class="subtotal">
+            <span>Subtotal:</span>
+            <span id="subtotal">MYR {{ subtotal.toFixed(2) }}</span>
+        </div>
+        
+        <div class="grand-total">
+            <span>Grand Total:</span>
+            <span id="grandTotal">MYR {{ grandTotal.toFixed(2) }}</span>
+        </div>
+        
+        <button class="checkout-button" @click="calculateTotal">Proceed to Payment</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
